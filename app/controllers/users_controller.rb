@@ -11,8 +11,10 @@ class UsersController < ApplicationController
 
     def create 
         @user = User.new(user_params)
+        
         if @user.save 
-            sessions[user_id] = @user.id
+            # byebug
+            session[:user_id] = @user.id
             redirect_to @user
         else
             flash[:errors]= @user.errors.full_messages

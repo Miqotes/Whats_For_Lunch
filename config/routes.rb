@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :reviews
-  # resources :choices
+  resources :choices, only: [:new]
   # resources :restaurants
-  # resources :categories
+  # resources :categories, only: [:index]
   resources :users, only: [:create, :show]
   get '/', to: 'users#index', as: 'welcome'
   get '/signup', to: 'users#new', as: 'signup'

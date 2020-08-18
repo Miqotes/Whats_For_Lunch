@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-    before_action :authorized, except: [:new, :create]
-    before_action :current_user, except: [:new, :create]
+    before_action :authorized, except: [:index,:new, :create]
+    before_action :current_user, except: [:index, :new, :create]
     
     def index
         

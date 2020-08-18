@@ -18,13 +18,13 @@ class SessionsController < ApplicationController
             else
                 flash[:message]= "Incorrect Password"
             end
-            redirect_to home_path
+            redirect_to signin_path
         end
     end
 
     def destroy
         session[:user_id] = nil 
         flash[:message] = "Successfully logged out!"
-        redirect_to home_path
+        redirect_to signin_path
     end
 end

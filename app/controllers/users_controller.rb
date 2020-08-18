@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
     before_action :authorized, except: [:new, :create]
     before_action :current_user, except: [:new, :create]
-
+    
+    def index
+        
+    end
     def new
         @user = User.new
     end

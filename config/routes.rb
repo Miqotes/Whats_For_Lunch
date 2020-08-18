@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # resources :choices
   # resources :restaurants
   # resources :categories
-  resources :users, only: [:create, :index, :show]
+  resources :users, only: [:index, :create, :show]
   get '/signup', to: 'users#new', as: 'signup'
   get '/', to: 'sessions#new', as: 'home'
   post '/login', to: 'sessions#create', as: 'login'

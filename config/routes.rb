@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  resources :choices
-  resources :restaurants
-  resources :categories
+  resources :reviews
+  # resources :choices
+  # resources :restaurants
+  # resources :categories
   resources :users, only: [:create, :index, :show]
   get '/signup', to: 'users#new', as: 'signup'
+  get '/', to: 'sessions#new', as: 'home'
+  post '/login', to: 'sessions#create', as: 'login'
+  delete '/sessions', to: 'sessions#destroy'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 

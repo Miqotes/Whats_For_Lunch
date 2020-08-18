@@ -1,4 +1,11 @@
 <h1>Sign Up </h1>
+<% if flash[:errors] %>
+  <% flash[:errors].each do |e| %>
+    <strong style='color: red;'><%= e %></strong>
+    <br/><br/>
+  <% end %>
+<% end %>
+
 <%= form_with model: @user, url: '/users', method: 'POST' do |f|%>
 <%= f.label :username %>
 <%= f.text_field :username%>

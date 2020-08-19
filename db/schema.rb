@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 2020_08_18_000259) do
   end
 
   create_table "choices", force: :cascade do |t|
-    t.boolean "preference"
     t.integer "user_id"
     t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false

@@ -3,3 +3,7 @@
 <%= @user.username %>
 </h1>
 
+<% @user.choices.each do |c|%>
+<%= link_to c.category.name, category_path %>
+<% end %>
+

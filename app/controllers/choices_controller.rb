@@ -7,8 +7,9 @@ class ChoicesController < ApplicationController
 
     def create 
         @choice = Choice.new(choice_params)
+        @choice.user_id = session[:user_id]
         if @choice.save 
-            redirect_to @choice
+            redirect_to category_path(@choice)
         else 
             render 'new'
         end
@@ -17,8 +18,8 @@ class ChoicesController < ApplicationController
     def edit 
 
     end
-    private 
+    private
     def choice_params
-        params.require(:choice).permit(:preference, :user_id, :category_id)
+        params.require(:choice).permit(:preference,:user_id,:category_id)
     end
 end

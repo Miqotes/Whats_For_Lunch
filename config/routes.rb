@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
-  resources :reviews, only: [:new, :create, :show]
+  resources :reviews
   resources :choices, only: [:new, :create, :show]
-  # resources :restaurants
+  resources :restaurants, only: [:index, :show]
   resources :categories, only: [:show]
   resources :users, only: [:create, :show]
   get '/', to: 'users#index', as: 'welcome'

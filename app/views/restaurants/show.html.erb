@@ -1,0 +1,14 @@
+<%= @restaurant.name %>
+<h3>Reviews:</h3>
+<% @restaurant.reviews.each do |r|%>
+<br>
+<h3>Username: </h3>
+<%= r.user.username %>
+<br>
+<h3> Rating: </h3>
+<%= r.rating %>
+<br>
+<h3> Comment:
+<%= r.comment %>
+<br>
+<% end %>

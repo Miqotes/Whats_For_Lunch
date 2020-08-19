@@ -1,8 +1,10 @@
 <h1><%= @current_user.username%> here is your latest review : </h1>
 
-<h3>Restaurant: <%= link_to @review.restaurant.name, restaurant_path%><h3>
+<h3>Restaurant: <%= link_to @review.restaurant.name, restaurant_path(@review.restaurant)%><h3>
 <br>
 <h3>Rating: <%= @review.rating%></h3>
 <br>
 <h3>Comment: <%= @review.comment%></h3>
+
+<%=link_to "Edit", edit_review_path(@review)%>
 

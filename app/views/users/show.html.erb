@@ -3,8 +3,8 @@
 <%= @user.username %>
 </h1>
 
-<% @user.choices.each do |c|%>
-<%= link_to c.category.name, category_path %>
+<% @user.reviews.each do |review|%>
+<%= link_to review.restaurant.name, review %>
 <% end %>
 
 <br>

@@ -11,6 +11,6 @@ class Category < ApplicationRecord
     end
 
     def random_selection
-        random_restaurant = @restaurant_array.sample
+        @random_restaurant = @restaurant_array.sample
     end
 end

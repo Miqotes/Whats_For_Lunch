@@ -11,7 +11,7 @@
     <br/><br/>
   <% end %>
 <% end %>
-<div id="signup_form">
+<div class ="form-group">
 <%= form_with model: @user, url: '/users', method: 'POST' do |f|%>
 <%= f.label :username %>
 <%= f.text_field :username%>
@@ -24,4 +24,6 @@
 </div>
 <br>
 <a id="go_back"class="btn btn-secondary btn-lg btn-block" href='/' role="button">Go Back</a>
-
+<div id="signup_logo">
+<%= image_tag "lunchlogo.png", :class => "center"%>
+</div>

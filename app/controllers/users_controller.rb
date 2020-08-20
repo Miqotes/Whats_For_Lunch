@@ -2,11 +2,14 @@ class UsersController < ApplicationController
     before_action :authorized, except: [:index,:new, :create]
     before_action :current_user, except: [:index, :new, :create]
     
+
+   
     def index
         render :layout => "home"
     end
     def new
         @user = User.new
+        render :layout => "home"
     end
 
     def create 

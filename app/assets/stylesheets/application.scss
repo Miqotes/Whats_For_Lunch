@@ -6,10 +6,16 @@
 .nav-link {
 	color:white;
 }
+
+.welcome-statement {
+	color:orange;
+	font-weight: bolder;
+}
 .center {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 20px;
 	width: 30%;
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -30,9 +36,11 @@ body {
 
 #signup_button {
 	background-color:rgb(247,147,30) ;
+	border: white;
 }
 #login_button {
 	background-color:rgb(193, 39, 45);
+	border: white;
 }
 
 #signin_form {
@@ -48,6 +56,12 @@ body {
 	text-align: center;
 }
 
+.submit-button {
+	background-color:rgb(247,147,30);
+	border-radius: 3px;
+	border: 1px solid rgb(247,147,30);
+	color: white;
+}
 h1 {
 	text-align: center;
 }
@@ -69,6 +83,7 @@ h1 {
 	background-color:rgb(247,147,30) ;
 	width: 30%;
 	margin-left: 35%;
+	border: white;
 	
 }
 
@@ -93,9 +108,12 @@ h1 {
 nav{
 	background: orange;
 	padding: 10px 40px 10px 70px;
-	border: 1px solid red;
+	border: 5px solid rgb(193, 39, 45);
+	border-radius: 25px;
 	border-left: none; 
 	border-right: none;
+	margin-right: 25%;
+	margin-left:25%
 }
 
 nav ul {
@@ -110,16 +128,19 @@ nav ul li.logo{
 	flex: 1;
 	font-size: 30px;
 	font-weight: 700;
+	color: white;
 
 }
 nav ul div.items{
 	padding: 0 25px;
 	display: inline-flex;
+	
 }
 nav ul div.items a{
 	text-decoration: none;
 	font-size: 18px;
 	padding: 0 12px;
+	color :white;
 }
 
 nav ul div.items a:hover{
@@ -138,6 +159,27 @@ color: red;
 	}
 }
 
+.category-form {
+	margin-top: 30px;
+}
+
+.user-review-container {
+	background: orange;
+	margin-right: 40%;
+	margin-left:40%;
+	border: 5px solid rgb(193, 39, 45);
+	border-radius: 25px;
+	color: white
+}
+
+.burger {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
 // #welcome_button2 {
 // color:#336b0e ;
 // font-size: 40px;

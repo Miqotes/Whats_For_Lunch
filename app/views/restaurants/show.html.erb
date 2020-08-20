@@ -1,16 +1,23 @@
-<%= @restaurant.name %>
-<h2>Average Rating:</h2>
+<br>
+<br>
+<h1><%= @restaurant.name %></h1>
+<h4>Average Rating:</h4>
 <h2><%=@average%></h2>
 <h3>Reviews:</h3>
+
+<div class="user-review-container">
 <% @restaurant.reviews.each do |r|%>
 <br>
 <h3>Username: </h3>
 <%= r.user.username %>
 <br>
+<br>
 <h3> Rating: </h3>
 <%= r.rating %>
 <br>
-<h3> Comment:
+<h3> Comment:</h3>
 <%= r.comment %>
 <br>
+<br>
 <% end %>
+</div>

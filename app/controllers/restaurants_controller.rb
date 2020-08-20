@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-    before_action :restaurant_reviews, only: [:show]
+    
     
     def index
 
@@ -10,14 +10,18 @@ class RestaurantsController < ApplicationController
     end
 
     def show 
-        @restaurant = Restaurant.find(params[:id])
-    end
 
+        @restaurant = Restaurant.find(params[:id])
+        r = @restaurant.reviews
+        @average = r.average(:rating).to_f
+
+    end
+    # def average_rating
+    #     @restaurant = Restaurant.find(params[:id])
+    #     found_review = @restaurant.reviews
+    #     @average_r = found_review.average(:rating).to_f
+    # end
     private
 
-    def restaurant_reviews
-        @restaurant = Restaurant.find(params[:id])
-        found_review = @restaurant.reviews
-        @average_r = found_review.average(:rating).to_f
-    end
+    
 end

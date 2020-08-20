@@ -3,7 +3,5 @@ class Restaurant < ApplicationRecord
     has_many :reviews
     validates :name, uniqueness: true, presence: true
 
-    def average_rating
-        Restaurant.average()
-    end
+    
 end

@@ -89,6 +89,55 @@ h1 {
 	padding-top: 50px;
 	padding-bottom: 30px;
 }
+
+nav{
+	background: orange;
+	padding: 10px 40px 10px 70px;
+	border: 1px solid red;
+	border-left: none; 
+	border-right: none;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+nav ul li.logo{
+	flex: 1;
+	font-size: 30px;
+	font-weight: 700;
+
+}
+nav ul div.items{
+	padding: 0 25px;
+	display: inline-flex;
+}
+nav ul div.items a{
+	text-decoration: none;
+	font-size: 18px;
+	padding: 0 12px;
+}
+
+nav ul div.items a:hover{
+color: red;
+}
+
+@media screen and (max-width: 1025px) {
+	nav{
+		padding: 10px 40px 10px 0px;
+	}
+	nav ul li.logo{
+		display: none;
+	}
+	nav ul div.items{
+		flex: 4;
+	}
+}
+
 // #welcome_button2 {
 // color:#336b0e ;
 // font-size: 40px;

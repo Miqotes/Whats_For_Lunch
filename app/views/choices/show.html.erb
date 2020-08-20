@@ -1,3 +1,9 @@
-<h1>Generate a Restaurant from :<%=Choice.last.category.name%></h1>
-
-<%= link_to "Generate Random Restaurant", new_review_path %>
+<br>
+<br>
+<div class='content-container'>
+<h1>You Chose :<br><%=Choice.last.category.name%></h1>
+<br>
+<h4> Just click the button and we'll to the rest!<h4>
+<br>
+<%= link_to "Restaurant Roulette", new_review_path,  class:"submit-button"%>
+</div>

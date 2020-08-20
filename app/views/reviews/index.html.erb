@@ -1,3 +1,6 @@
+<br>
+<br>
+<h1>Oops!<h1>
 <% if  @review.errors.any? %>
   <div id="error_explanation">
     <h2>
@@ -7,13 +10,12 @@
  
    <br>
     <% @review.errors.full_messages.each do |msg| %>
-    <strong style='color: red;'><%= msg%></strong>  
+    <strong style='color: red;'><%= msg%></strong><br> 
     <% end %>
     
   </div>
   <h2>
 <% end %>
+<%= image_tag "rectangular-black-face-crossed-and-the-error-image-10.png", class:"error-logo"%>
 
-<div id="signup_logo">
-<%= image_tag "lunchlogo.png", :class => "center"%>
-</div>
+

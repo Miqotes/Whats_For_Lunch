@@ -1,8 +1,9 @@
-<div class="burger"><%= image_tag "image.png", :class => "center"%></div>
-<div class='category-form'>
-<h1>Select a Category<h1>
-<%= form_for @choice do |f| %>
+<div class="burger"><%= image_tag "food-icon-update.2.png", :class => "center"%></div>
+<div class='content-container'>
+<h1>Select a Category</h1>
+<h4><%= form_for @choice do |f| %>
   <%= f.label :category_id, "Cuisine" %>
   <%= f.collection_select :category_id, Category.all, :id, :name%>
-  <%= f.submit %>
+  <%= f.submit "Submit", class: "submit-button" %>
 <% end %>
+</h4>

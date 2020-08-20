@@ -1,11 +1,15 @@
-<h1><%= @current_user.username%> here is your latest review : </h1>
+<br>
 
-<h3>Restaurant: <%= link_to @review.restaurant.name, restaurant_path(@review.restaurant)%><h3>
+<div class="content-container">
+<h1><%= @current_user.username%>, here is your latest review : </h1>
+<br>
+<h3>Restaurant: <%= link_to @review.restaurant.name, restaurant_path(@review.restaurant), class: 'submit-button'%><h3>
 <br>
 <h3>Rating: <%= @review.rating%></h3>
 <br>
 <h3>Comment: <%= @review.comment%></h3>
+<br>
 
-<%= link_to 'edit', edit_review_path(@review), class: 'button'%>
-<%= link_to 'delete', review_path(@review), method: 'delete', class: 'button' %>
-
+<%= link_to 'edit', edit_review_path(@review), class: 'submit-button'%>
+<%= link_to 'delete', review_path(@review), method: 'delete', class: 'submit-button' %>
+</div>

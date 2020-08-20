@@ -1,4 +1,16 @@
 @import "bootstrap";
+.footer {
+	position: fixed;
+}
+.little-logo {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;
+	width: 5%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
 .navbar-custom { 
 	background-image: linear-gradient(to right, rgb(247,147,30) ,white);
 } 
@@ -8,7 +20,7 @@
 }
 
 .welcome-statement {
-	color:orange;
+	color:white;
 	font-weight: bolder;
 }
 .center {
@@ -23,6 +35,8 @@
 
 body {
 	font-family: 'Montserrat', sans-serif;
+	background-color: rgb(182, 215, 230);
+	color: white;
 	text-align :center;
 	// background-image: linear-gradient(black, white);
 }
@@ -36,11 +50,11 @@ body {
 
 #signup_button {
 	background-color:rgb(247,147,30) ;
-	border: white;
+	border: 3px solid white;
 }
 #login_button {
-	background-color:rgb(193, 39, 45);
-	border: white;
+	background-color:rgb(247,147,30) ;
+	border: 3px solid white;
 }
 
 #signin_form {
@@ -59,8 +73,12 @@ body {
 .submit-button {
 	background-color:rgb(247,147,30);
 	border-radius: 3px;
-	border: 1px solid rgb(247,147,30);
+	border: 3px solid white;
 	color: white;
+	padding:5px;
+}
+.submit-button:hover {
+	color:  rgb(182, 215, 230)
 }
 h1 {
 	text-align: center;
@@ -83,7 +101,7 @@ h1 {
 	background-color:rgb(247,147,30) ;
 	width: 30%;
 	margin-left: 35%;
-	border: white;
+	border: 3px solid white;
 	
 }
 
@@ -108,12 +126,13 @@ h1 {
 nav{
 	background: orange;
 	padding: 10px 40px 10px 70px;
-	border: 5px solid rgb(193, 39, 45);
+	border: 5px solid white;
 	border-radius: 25px;
-	border-left: none; 
-	border-right: none;
+	
+	
 	margin-right: 25%;
-	margin-left:25%
+	margin-left:25%;
+	margin-top: 50px;
 }
 
 nav ul {
@@ -144,7 +163,7 @@ nav ul div.items a{
 }
 
 nav ul div.items a:hover{
-color: red;
+color: rgb(182, 215, 230);
 }
 
 @media screen and (max-width: 1025px) {
@@ -160,7 +179,7 @@ color: red;
 }
 
 .category-form {
-	margin-top: 30px;
+	margin-top: 15px;
 }
 
 .user-review-container {
@@ -177,8 +196,57 @@ color: red;
 	margin-left: auto;
 	margin-right: auto;
 	width: 40%;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.content-container {
+	border: 5px solid white;
+	width: 50%;
+	border: 5px solid white;
+	border-radius: 25px;
+	margin-left:25%;
+	padding-top: 20px;
+	padding-bottom: 30px
+}
+
+.input-restaurant {
+	border: 2px solid rgb(247,147,30);
+	border-radius: 5px;
+	
+}
+.input-rating {
+	display: inline-block;
+	border: 2px solid rgb(247,147,30);
+	border-radius: 5px;
+	margin-left: 55px;
+}
+.input-comment {
+	display: inline-block;
+	border: 2px solid rgb(247,147,30);
+	border-radius: 5px;
+	margin-left: 35px;
+}
+.comment-label {
+	
+		display: inline-block;
+		width: 30x;
+		
+		white-space: nowrap;
+		overflow: hidden;
+}
+
+.review-form {
+box-align: center;
+}
+
+.error-logo {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;
+	width: 15%;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 // #welcome_button2 {
 // color:#336b0e ;

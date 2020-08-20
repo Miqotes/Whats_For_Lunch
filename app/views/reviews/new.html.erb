@@ -4,31 +4,31 @@
     <%end%>
     <%end%>
     <br>
+<div class="content-container">
+<h2>Selection : </h2>
 
-<h1>Selection : </h1>
 
 
-
-<%= @rest_choice.name %>
+<h3><%= @rest_choice.name %></h3>
 <br>
-<p>Restaurant Id Number: 
-(insert this number when creating review)
-<%= @rest_choice.id%>
-<br>
+
 
 <h3> How was our choice?<h3>
-<h1>New Review</h1>
+<h2>New Review</h2>
+<br>
 
+<div class="review-form">
 <%= form_for @review do |f| %>
-  <%= f.label :restaurant_id%>
-  <%= f.number_field :restaurant_id%>
 
-<%= f.label :rating %>
-  <%= f.number_field :rating%>
-
-<%= f.label :comment %>
-  <%= f.text_area :comment%>
-
-
-  <%= f.submit %>
+  <%= f.label :restaurant_id, "Restaurant ID:"%>
+  <%= f.number_field :restaurant_id, class: "input-restaurant", :value => "#{@rest_choice.id}"%> 
+<br>
+<%= f.label :rating, "Rating:"%>
+  <%= f.number_field :rating, class: "input-rating"%>
+<br>
+<%= f.label :comment, "Comment:", class:"comment-label"%>
+  <%= f.text_area :comment, class: "input-comment"%>
+<br>
+  <%= f.submit "Submit",class: "submit-button" %>
 <% end %>
+</div>

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     before_action :current_user, except: [:index, :new, :create]
     
     def index
-        
+        render :layout => "home"
     end
     def new
         @user = User.new

@@ -1,5 +1,11 @@
 @import "bootstrap";
+.navbar-custom { 
+	background-image: linear-gradient(to right, rgb(247,147,30) ,white);
+} 
 
+.nav-link {
+	color:white;
+}
 .center {
 	display: block;
 	margin-left: auto;
@@ -11,6 +17,8 @@
 
 body {
 	font-family: 'Montserrat', sans-serif;
+	text-align :center;
+	// background-image: linear-gradient(black, white);
 }
 
 .welcome_body {
@@ -32,10 +40,39 @@ body {
    text-align: center;
  
 }
+#signup-header {
+	padding-top:50px;
+}
+#signup_form {
+	
+	text-align: center;
+}
 
 h1 {
 	text-align: center;
 }
+
+#user_logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.user_review_list {
+	text-align: center;
+}
+
+#pick_category_button {
+	background-color:rgb(247,147,30) ;
+	width: 30%;
+	margin-left: 35%;
+	
+}
+
+
 // #welcome_button2 {
 // color:#336b0e ;
 // font-size: 40px;

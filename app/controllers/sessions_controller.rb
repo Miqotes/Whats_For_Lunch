@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
     before_action :authorized, except: [:new, :create]
     before_action :current_user, except: [:new, :create]
-
+    layout "home"
     def new 
 
     end

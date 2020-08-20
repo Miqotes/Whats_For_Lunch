@@ -1,12 +1,19 @@
+<div id="user_logo">
+<%= image_tag "userlogo.png", :class => "center"%>
+</div>
 <h1>
 <strong>Username:
 <%= @user.username %>
 </h1>
+<div class="user_review_list">
+<a id="pick_category_button"class="btn btn-secondary btn-lg btn-block" href='/choices/new' role="button">Pick A Food Category</a>
+<br>
 
+<h1>Recent Reviews:</h1>
 <% @user.reviews.each do |review|%>
 <%= link_to review.restaurant.name, review %>
 <% end %>
-
 <br>
-<%= link_to "Pick a Lunch Category", new_choice_path%>
+</div>
+<br>
 

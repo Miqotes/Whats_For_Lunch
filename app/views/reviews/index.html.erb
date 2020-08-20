@@ -1,0 +1,19 @@
+<% if  @review.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@review.errors.count, "error") %>
+      prohibited this review from being saved:
+    
+ 
+   <br>
+    <% @review.errors.full_messages.each do |msg| %>
+    <strong style='color: red;'><%= msg%></strong>  
+    <% end %>
+    
+  </div>
+  <h2>
+<% end %>
+<a id="go_back"class="btn btn-secondary btn-lg btn-block" href='/' role="button">Go Back</a>
+<div id="signup_logo">
+<%= image_tag "lunchlogo.png", :class => "center"%>
+</div>

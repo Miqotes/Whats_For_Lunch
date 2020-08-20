@@ -2,6 +2,10 @@ class ReviewsController < ApplicationController
     before_action :authorized
     before_action :current_user
     before_action :restaurant_choice, only: [:new]
+    
+    def index
+       
+    end
     def new 
         @review = Review.new
     end
@@ -12,9 +16,11 @@ class ReviewsController < ApplicationController
         if @review.save 
             redirect_to @review
         else  
-            render 'new'
+            
+            render 'index'
         end
     end
+
 
     def show 
         @review = Review.find(params[:id])

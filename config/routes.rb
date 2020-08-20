@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create', as: 'login'
   delete '/sessions', to: 'sessions#destroy'
   get '/random', to: 'choices#random', as: 'random'
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 end

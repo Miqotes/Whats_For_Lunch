@@ -7,6 +7,7 @@ class ReviewsController < ApplicationController
        
     end
     def new 
+        sleep 3
         @review = Review.new
     end
     

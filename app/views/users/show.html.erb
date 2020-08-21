@@ -1,19 +1,28 @@
+<br>
+<br>
+
+<div class="content-container">
 <div id="user_logo">
 <%= image_tag "userlogo.png", :class => "center"%>
 </div>
-<h1>
+
+<h3>
 <strong>Username:
 <%= @user.username %>
-</h1>
+</h3>
+<br>
 <div class="user_review_list">
 <a id="pick_category_button"class="btn btn-secondary btn-lg btn-block" href='/choices/new' role="button">Pick A Food Category</a>
 <br>
 
-<h1>Recent Reviews:</h1>
+<h3>Recent Reviews:</h3>
 <% @user.reviews.each do |review|%>
-<%= link_to review.restaurant.name, review %>
+<br>
+<%= link_to review.restaurant.name, review, class:"submit-button" %>
+<br>
+<br>
 <% end %>
 <br>
 </div>
 <br>
-
+</div>

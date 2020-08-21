@@ -1,16 +1,36 @@
 
 
-<h1> Edit Review </h1>
+<% if flash[:errors] %>
+  <% flash[:errors].each do |e| %>
+    <strong style='color: red;'><%= e %></strong>
+    <%end%>
+    <%end%>
+    <br>
+<div class="content-container">
 
+
+
+
+
+
+
+
+
+<h2>Edit Your Review</h2>
+<br>
+
+<div class="review-form">
 <%= form_for @review do |f| %>
-  <%= f.label :restaurant_id%>
-  <%= f.number_field :restaurant_id%>
 
-<%= f.label :rating %>
-  <%= f.number_field :rating%>
-
-<%= f.label :comment %>
-  <%= f.text_area :comment%>
-
-  <%= f.submit %>
+  <%= f.label :restaurant_id, "Restaurant ID:"%>
+  <%= f.number_field :restaurant_id, class: "input-restaurant"%>
+<br>
+<%= f.label :rating, "Rating:"%>
+  <%= f.number_field :rating, class: "input-rating"%>
+<br>
+<%= f.label :comment, "Comment:", class:"comment-label"%>
+  <%= f.text_area :comment, class: "input-comment"%>
+<br>
+  <%= f.submit "Submit",class: "submit-button" %>
 <% end %>
+</div>

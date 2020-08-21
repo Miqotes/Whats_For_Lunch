@@ -8,16 +8,14 @@
 <div class="user-review-container">
 <% @restaurant.reviews.each do |r|%>
 <br>
-<h3>Username: </h3>
-<%= r.user.username %>
-<br>
-<br>
-<h3> Rating: </h3>
-<%= r.rating %>
-<br>
-<h3> Comment:</h3>
-<%= r.comment %>
-<br>
+<h5>Username: </h5>
+<h6><%= r.user.username %><h6>
+<h5> Rating: </h5>
+<h6><%= r.rating %></h6>
+
+<h5> Comment:</h5>
+<h6 id="comment-line"><%= r.comment %></h6>
+-------------------------------
 <br>
 <% end %>
 </div>

@@ -24,12 +24,14 @@
 <nav>
     <ul>
       <li class="logo">WhatsForLunch</li>
-      <li class="btn"><span class="fas fa-bars"></span></li>
+      
       <div class="items">
       <li><a href="/choices/new">Home</a></li>
-      <li><a href="#">Profile</a></li>
+      <li><%=link_to "Profile", user_path(session[:user_id])%></li>
+     
+
       <li><a href="/">Logout</a></li>
-      <li><a href="#">Contact</a></li>
+     
     </ul>
   </nav>
   </body>

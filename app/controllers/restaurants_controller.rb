@@ -13,8 +13,7 @@ class RestaurantsController < ApplicationController
 
         @restaurant = Restaurant.find(params[:id])
         r = @restaurant.reviews
-        @average = r.average(:rating).to_f
-
+        @average =  r.average(:rating).to_f
     end
     # def average_rating
     #     @restaurant = Restaurant.find(params[:id])

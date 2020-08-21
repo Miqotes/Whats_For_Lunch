@@ -21,7 +21,7 @@
 <%= form_for @review do |f| %>
 
   <%= f.label :restaurant_id, "Restaurant ID:"%>
-  <%=f.number_field :restaurant_id, class: "input-restaurant", :value => "#{@rest_choice.id}"%> 
+  <%=f.number_field :restaurant_id, class: "input-restaurant", :value => "#{@rest_choice.id}", :readonly => true%> 
 <br>
 <%= f.label :rating, "Rating:"%>
   <%= f.number_field :rating, class: "input-rating"%>

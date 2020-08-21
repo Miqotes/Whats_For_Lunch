@@ -3,7 +3,7 @@
 <h1>Select a Category</h1>
 <h4><%= form_for @choice do |f| %>
   <%= f.label :category_id, "Cuisine" %>
-  <%= f.collection_select :category_id, Category.all, :id, :name%>
+   <%= f.collection_select :category_id, Category.all, :id, :name, {class:"dropdown"}%>
   <%= f.submit "Submit", class: "submit-button" %>
 <% end %>
 </h4>

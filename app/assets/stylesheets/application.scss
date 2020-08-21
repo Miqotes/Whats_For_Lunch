@@ -79,6 +79,10 @@ body {
 	padding:5px;
 	box-shadow:3px 3px 3px #888;
 }
+.form-control {
+	border: 3px solid orange;	
+	
+}
 .submit-button:hover {
 	color:  rgb(182, 215, 230)
 }
@@ -144,7 +148,7 @@ nav ul {
 	list-style: none;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: center;
+	
 }
 
 nav ul li.logo{
@@ -152,6 +156,7 @@ nav ul li.logo{
 	font-size: 30px;
 	font-weight: 700;
 	color: white;
+	justify-content: left;
 
 }
 nav ul div.items{

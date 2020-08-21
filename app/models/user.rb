@@ -1,5 +1,6 @@
 class User < ApplicationRecord
     validates :username, presence: true, uniqueness: true
+    validates :password, presence: true, length: {within: 4..10}
     has_many :choices 
     has_many :categories, through: :choices 
     has_many :restaurants, through: :categories 

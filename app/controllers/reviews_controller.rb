@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
        
     end
     def new 
-        sleep 3
+        sleep 2
         @review = Review.new
     end
     
@@ -17,7 +17,7 @@ class ReviewsController < ApplicationController
         if @review.save 
             redirect_to @review
         else  
-            
+            flash
             render 'index'
         end
     end

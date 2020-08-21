@@ -24,7 +24,7 @@
   <%=f.number_field :restaurant_id, class: "input-restaurant", :value => "#{@rest_choice.id}", :readonly => true%> 
 <br>
 <%= f.label :rating, "Rating:"%>
-  <%= f.number_field :rating, class: "input-rating"%>
+  <%= f.number_field :rating, class: "input-rating", :placeholder => "1-5"%>
 <br>
 <%= f.label :comment, "Comment:", class:"comment-label"%>
   <%= f.text_area :comment, class: "input-comment"%>
